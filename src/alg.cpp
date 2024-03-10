@@ -19,13 +19,11 @@ int cbinsearch(int *arr, int size, int value) {
             temp++;
         }
         break;
+    } else if (arr[mid] < value) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
     }
-    else if (arr[mid] < value) {
-        left = mid + 1;
-    }
-    else {
-        right = mid - 1;
-    }
-}
-return count;
+  }
+  return count;
 }
